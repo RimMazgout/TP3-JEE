@@ -10,4 +10,12 @@ public class UserService {
     public boolean authenticate(User user) {
         return userDao.checkUser(user);
     }
+
+    public boolean register(User user) {
+        return userDao.addUser(user);
+    }
+
+    public boolean exists(String username) {
+        return userDao.userExists(username);
+    }
 }
